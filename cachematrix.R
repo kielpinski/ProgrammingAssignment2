@@ -24,12 +24,12 @@ makeCacheMatrix <- function(x = numeric()) {
 ## and, if not, calculate the inverse of the special "matrix"    
 ## created with makeCachMatrix.
 
-CacheSolve <- function(x, ...) {
+cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         
         i <- x$getinverse()
         if(!is.null(i)) {
-                message("getting cached data")
+                message("Getting cached data")
                 return(i)
         }
         data <- x$get()
@@ -41,4 +41,4 @@ CacheSolve <- function(x, ...) {
 mat <- matrix(c(4,2,7,6),2,2)
 mat
 m1 <- makeCacheMatrix(mat)
-CacheSolve(m1)
+cacheSolve(m1)
