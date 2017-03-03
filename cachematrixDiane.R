@@ -24,6 +24,9 @@ makeCacheMatrix <- function(x = numeric()) {
 ## and, if not, calculate the inverse of the special "matrix"    
 ## created with makeCachMatrix.
 
+
+m1 <- makeCacheMatrix(mat)
+
 CacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         
